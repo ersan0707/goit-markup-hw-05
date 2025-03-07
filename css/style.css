@@ -502,7 +502,7 @@ header-three{
   .footer-text {
     max-width: 264px;
     font-size: 16px;
-    font-weight: 500px;
+    font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #f4f4fd;
@@ -527,7 +527,7 @@ header-three{
   .site-footer .subscribe>p{
     font-size: 16px;
     line-height: 24px;
-    letter-spacing: 2%;
+    letter-spacing: 0.02em;
     text-align: left;
   }
   .site-footer .subscribe .footer-email{
@@ -622,7 +622,7 @@ header-three{
     color: #8e8f99;
     font-size: 12px;
     line-height: 14px;
-    letter-spacing: 4%;
+    letter-spacing: 0.04em;
 }
 .modal .modal-form .input-group .input-container{
     height: 40px;
@@ -676,7 +676,7 @@ header-three{
   color:#8e8f99;
   font-size: 12px;
   line-height: 14px;
-  letter-spacing: 4%;  
+  letter-spacing: 0.04em;  
 }
 .consent-container .label a{
 text-decoration: underline;
