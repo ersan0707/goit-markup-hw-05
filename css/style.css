@@ -533,10 +533,15 @@ header-three{
   .site-footer .subscribe .footer-email{
     width: 264px;
     height: 40px;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    padding-left: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    border: 1px solid white;
-    color:white;
-    background-color: #2e2f42;
+    color: #ffffff;
   }
   .site-footer .subscribe .footer-email::placeholder{
     color: white;
@@ -691,9 +696,11 @@ font-size: 12px;
 }
 .button-container .send{
     display: block;
-    margin: 0 auto;
-    min-width: 169px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 165px;
     height: 56px;
+    font-family: 'Roboto', sans-serif;
     border: none;
     border-radius: 4px;
     cursor: pointer;
