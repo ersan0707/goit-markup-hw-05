@@ -682,7 +682,7 @@ header-three{
     color: #2E2F42;
     margin-bottom: 16px;
 } 
-.input-group{
+.user-form .input-group{
     margin-bottom: 16px;
 }
 /* Genel Form Stili */
@@ -725,13 +725,21 @@ form {
     outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .form-input-text{
+    display: block;
     width: 100%;
     height: 120px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
+    font-size:12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    background-color: transparent;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    padding: 8px 16px;
     outline: transparent;
+    resize: none;
+    background-color: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus {
@@ -752,22 +760,7 @@ form {
 }
 
 /* Textarea Stili */
-.textarea {
-    display: block;
-    width: 100%;
-    height: 120px;
-    font-size:12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    padding: 8px 16px;
-    outline: transparent;
-    resize: none;
-    background-color: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 
 .form-input-text{
     border-color: #4D5AE5;
@@ -811,12 +804,12 @@ form {
     margin-right: 8px;
 }
 
-input[type="checkbox"]:checked + .checkbox-box {
+input[type="checkbox"]:checked + label .form-check-span {
     background-color: #404bbf;
     border: none;
     fill: #F4F4FD;
 }
-.check-link a{
+.form-check-span a{
     color: #4d5ae5;
 }
 /* Buton Stili */
