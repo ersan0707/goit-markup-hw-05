@@ -668,7 +668,7 @@ header-three{
   }
   
   .modal .modal-form .input-group {
-    margin-top: 8px;
+    margin-bottom: 8px;
   }
   
   .modal .modal-form .input-group label {
@@ -741,8 +741,8 @@ header-three{
   }
   
   .consent-container label a {
-    text-decoration: underline;
     color: #4d5ae5;
+    text-decoration: underline;
     font-size: 12px;
   }
   
