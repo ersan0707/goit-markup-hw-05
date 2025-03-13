@@ -667,7 +667,7 @@ header-three{
     width: 100%;
   }
   
-  .modal .modal-form .input-group {
+  .modal .modal-form .input-group div{
     margin-bottom: 8px;
   }
   
@@ -681,7 +681,7 @@ header-three{
   .modal .modal-form .input-group .input-container {
     height: 40px;
     border-radius: 4px;
-    border: 1px solid #2e2f42;
+    border: 1px solid rgba(46, 47, 66, 0.4);
     display: flex;
     align-items: center;
     gap: 4px;
@@ -742,8 +742,7 @@ header-three{
   
   .consent-container label a {
     color: #4d5ae5;
-    text-decoration: underline;
-    font-size: 12px;
+    
   }
   
   .button-container {
