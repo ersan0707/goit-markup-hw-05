@@ -603,241 +603,168 @@ header-three{
     font-size:12px;
     font-weight: 400;
 }
-  /*modal menu*/
-  .modal{
+ /* Modal */
+.modal {
+    display: flex;
     position: fixed;
-    z-index: 2;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    min-height: 584px;
-    background: #2E2F4266;
-    opacity: 1;
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1)  
-  }
-  .modal-container{
-    position: absolute;
-    background-color: #FCFCFC;
-    width: 408px;
-    min-height: 584px;
-    top:50%;
-    left: 50%;
-    margin: 0 auto;
-    border-radius: 4px;
-    padding: 72px 24px 24px 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transform: translate(-50%, -50%);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .modal .modal-form .modal-container{
-    margin-bottom: 8px;
+    right: 0;
+    bottom: 0;
+    justify-content: center;
+    align-items: center;
   }
   
-  .popup-btn-close{
+  .modal .overlay {
     position: absolute;
-    top: 24px;
-    right: 24px;
-    display: flex;
-    height: 24px;
-    width: 24px;
-    background-color: #E7E9FC;
-    color: black;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    cursor: pointer;
-    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #2e2f42;
+    opacity: 0.4;
   }
-  .popup-btn-close:hover{
-    background-color: #404bbf;
-    border: none;
-}
-.popup-btn-close:focus{
-    background-color: #404bbf;
-    border: none;
-}
-  .popup-svg-close{
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  
+  .is-open {
+    display: none;
   }
-  .popup-btn-close:hover .popup-svg-close{
-    fill: #ffffff;
-}
-
-.popup-btn-close:focus .popup-svg-close{
-    fill: #ffffff;
-}
-.modal .modal-title{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: center;
-    letter-spacing: 0.02em;
-    color: #2E2F42;
-    margin-bottom: 16px;
-} 
-.user-form .input-group{
-    margin-bottom: 16px;
-}
-/* Genel Form Stili */
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Genel Form Alanı Stili */
-.input-group {
-    margin-bottom: 8px;
-}
-
-/* Label Stilleri */
-.form-label {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #8e8f99;
-    display: block;
-    margin-bottom: 4px;
-}
-
-/* Input Alanı Stili */
-.input-container {
+  
+  .modal .modal-form {
     position: relative;
-    margin-bottom: 8px;
-}
-
-
-.form-input {
+    width: 408px;
+    height: 584px;
+    z-index: 2;
+    background-color: #fcfcfc;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 24px;
+  }
+  
+  .modal .modal-form .close {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  
+  .modal .modal-form .close .icon {
+    width: 8px;
+    height: 8px;
+    fill: #2e2f42;
+  }
+  
+  .modal .modal-form .modal-title {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-weight: 500;
+    width: 100%;
+  }
+  
+  .modal .modal-form .input-group {
+    margin-top: 8px;
+  }
+  
+  .modal .modal-form .input-group label {
+    color: #8e8f99;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+  }
+  
+  .modal .modal-form .input-group .input-container {
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #2e2f42;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 16px;
+  }
+  
+  .modal .modal-form .input-group .input-container .icon {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .modal .modal-form .input-group .input-container:focus-within .icon {
+    fill: #4d5ae5;
+  }
+  
+  .modal .modal-form .input-group .input-container:focus-within {
+    border: 1px solid #4d5ae5;
+  }
+  
+  .modal .modal-form .input-group .input-container input {
     width: 100%;
     border: none;
     outline: none;
-    height: 40px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    background-color: transparent;
-    padding-left: 38px;
-    outline: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input-text{
-    display: block;
-    width: 100%;
-    height: 120px;
-    font-size:12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color:rgba(46, 47, 66, 0.4);
-    border: 1px solid rgba(46, 47, 66, 0.4);
-    border-radius: 4px;
-    padding: 8px 16px;
-    outline: transparent;
-    resize: none;
-    background-color: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-input:focus {
-    border-color: #4D5AE5;
-}
-
-/* Input İçindeki SVG */
-.icon {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-input:focus + .icon {
-    fill: #4D5AE5;
-}
-
-/* Textarea Stili */
-
-
-.form-input-text{
-    border-color: #4D5AE5;
-}
-
-/* Checkbox Alanı */
-.form-check {
-    
-    margin-bottom: 24px;
-}
-
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-.form-check-label {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
+  }
+  
+  .modal .modal-form .input-group .comment {
     color: #8e8f99;
-    
-}
-
-.form-check-span {
+    width: 100%;
+    resize: none;
+    height: 120px;
+    padding: 8px;
+  }
+  
+  .modal .modal-form .input-group .comment:focus-within {
+    border: 1px solid #4d5ae5;
+  }
+  
+  .consent-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  
+  .consent-container .consent {
     width: 16px;
     height: 16px;
-    border: 1px solid rgba(46, 47, 66, 0.4);
+    border: 1px solid #2e2f42;
     border-radius: 2px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    fill: transparent;
-    margin-right: 8px;
-}
-
-input[type="checkbox"]:checked + label .form-check-span {
-    background-color: #404bbf;
-    border: none;
-    fill: #F4F4FD;
-}
-.check-link a{
+  }
+  
+  .consent-container label {
+    color: #8e8f99;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.1em;
+  }
+  
+  .consent-container label a {
+    text-decoration: underline;
     color: #4d5ae5;
-}
-/* Buton Stili */
-
-.form-button:hover {
-    background-color: #3b47c4;
-}
-.popup-blue-btn{
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #ffffff;
-    cursor: pointer;
-    background-color: #4D5AE5;
-    border: none;
+    font-size: 12px;
+  }
+  
+  .button-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .button-container .send {
     display: block;
+    margin: 0 auto;
     min-width: 169px;
     height: 56px;
+    border: none;
     border-radius: 4px;
-    padding: 16px 32px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    line-height: 1.5;
+    font-weight: 500;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #4d5ae5;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    margin:0 auto
-}
-.form-btn{
-    display: block;
-    text-align: center;
-    margin-top: 24px;
-
-}
+  }
